@@ -1,0 +1,63 @@
+@media (max-width: 1500px) {
+    .helloSection__top {
+        flex-direction: column;
+    }
+    .helloSection__image {
+        width: 50vw;
+    }
+    .helloSection__bottom {
+        padding: 50px 0px;
+    }
+    .projectsSection__project {
+        flex-direction: column;
+    }
+    .projectsSection__projectInfo {
+        margin: 40px auto 0px;
+        width: 80%;
+    }
+    .projectsSection__projectDescription {
+        max-width: 80%;
+    }
+    .projectsSection__image {
+        width: 80%;
+        margin: 0px auto;
+    }
+}
+
+@media (max-width:1000px) {
+    .pageNavigation__list {
+        flex-direction: column;
+        width: calc(100vw - 25px);
+        text-align: center;
+        padding: 0px;
+    }
+    .pageNavigation__item {
+        margin-top: 20px;
+    }
+    .pageNavigation__item:last-child {
+        margin-bottom: 20px;
+    }
+   
+}
+
+@media (max-width:700px) {
+    .interestsSection__boxes--wrapper {
+        flex-direction: column;
+    }
+    .interestsSection__box {
+        width: 70vw;
+        margin-top: 40px;
+    }
+    .helloSection__text {
+        font-size: 2.5em;
+    }
+}
+
+@media (max-width:800px) {
+    .contactSection__form {
+        margin: 40px auto;
+    }
+    
+}
+
+

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="assets/fonts/Font__MyriadPro.css">
     <link rel="stylesheet" href="assets/css/fontello.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style-mobile.css">
 </head>
 <body>
     <nav class="pageNavigation">
@@ -15,7 +16,7 @@
                 <a href="assets/CezaryKaniaCV.pdf" class="pageNavigation__link" download>Resume</a>
             </li>
             <li class="pageNavigation__item">
-                <a href="#" class="pageNavigation__link">Projects</a>
+                <a href="#projectsSection" class="pageNavigation__link">Projects</a>
             </li>
             <li class="pageNavigation__item">
                 <a href="https://github.com/cezary-kania" target="_blank" class="pageNavigation__link">GitHub</a>
@@ -31,7 +32,7 @@
                 <span class="bluecol">H</span>e<span class="bluecol">l</span><span class="bluecol">l</span>o 
                 <br>world!
             </h2>
-            <img src="assets/imgs/character.gif" alt="developer--image">
+            <img src="assets/imgs/character.gif" alt="developer--image" class="helloSection__image">
             <h2 class="helloSection__text">
                 <span class="bluecol">I</span>'<span class="limecol">m</span><br><span class="bluecol">Cezary Kania</span> 
                 Junior <span class="bluecol">Software</span> developer
@@ -54,8 +55,7 @@
                 </h3>
                 <p class="interestsSection__box--desc">
                     I’ve created many useful desktop
-apps - text editor, image analyzer,
-etc.
+apps - text editor, image processing app, port scanner, instagram photos downloader etc. Technologies I mostly use: Python, C#
                 </p>
             </div>
             <div class="interestsSection__box">
@@ -104,22 +104,24 @@ etc.
             <br>but I work really hard on it.
         </p>
     </section>
-    <section class="projectsSection">
+    <section class="projectsSection" id="projectsSection">
         <h3 class="projectsSection__header">
             Some of my projects:
         </h3>
         <div class="projectsSection__wrapper">
             <button class="projectsSection__pagginationBtn"><</button>
-            <img class="projectsSection__image"src="#" alt="project preview">
-            <div class="projectsSection__projectInfo">
-                <h4 class="projectsSection__projecttitle">Expense Tracker app</h4>
-                <p class="projectsSection__projectDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris condimentum ac nisi at tempus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris bibendum iaculis elit, </p>
-                <a href="#" class="projectsSection__liveLink">Live</a>
-                <a href="#" class="projectsSection__codeLink">View Code</a>
+            <div class="projectsSection__project">
+                <img class="projectsSection__image" src="assets/imgs/projectsPreview/ExpenseTrackerPrev.png" alt="project preview">
+                <div class="projectsSection__projectInfo">
+                    <h4 class="projectsSection__projecttitle">Expense Tracker app</h4>
+                    <p class="projectsSection__projectDescription">Expense Tracker is one of my favorite application types. Thanks to my app I saved a lot of money. I always wanted to create my version of expence tracker so I did. This project has been desigen in REST architecture. On the backend side I used Python with framework Restful Flask. When I was planning app, I've decided to program frontend in vanilla JavaScript.</p>
+                    <a href="#" class="projectsSection__liveLink">Live</a>
+                    <a href="https://github.com/cezary-kania/ExpenseTracker" class="projectsSection__codeLink" target="_blank">View Code</a>
+                </div>
             </div>
             <button class="projectsSection__pagginationBtn">></button>
         </div>
-        
+    
     </section>
     <section class="contactSection" id="contactSection">
         <h3 class="contactSection__header">
@@ -128,11 +130,11 @@ etc.
         <div class="contactSection__wrapper">
             <div class="contactSection__links">
                 <h4 class="contactSection__links--header">E-mail address:</h4>
-                <a class="contactSection__link" href="#"><i class="icon-mail-alt"></i> cezary.kaniaq@gmail.com</a>
+                <a class="contactSection__link" href="mailto:cezary.kaniaq@gmail.com"><i class="icon-mail-alt"></i> cezary.kaniaq@gmail.com</a>
                 <h4 class="contactSection__links--header">Social media:</h4>
-                <a class="contactSection__link" href="#"><i class="icon-github"></i></a>
-                <a class="contactSection__link" href="#"><i class="icon-linkedin-circled"></i></a>
-                <a class="contactSection__link" href="#"><i class="icon-facebook-squared"></i></a>
+                <a class="contactSection__link" href="https://github.com/cezary-kania" target="_blank"><i class="icon-github"></i></a>
+                <a class="contactSection__link" href="https://www.linkedin.com/in/cezary-kania-b8314314b/" target="_blank"><i class="icon-linkedin-circled"></i></a>
+                <a class="contactSection__link" href="https://www.facebook.com/cezary.kania.8" target="_blank"><i class="icon-facebook-squared"></i></a>
             </div>
             <form action="#" class="contactSection__form">
                 <label for="e-mail" class="contactSection__label textInput--label">E-mail:</label>
