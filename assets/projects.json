@@ -1,0 +1,12 @@
+{
+    "projects" :[
+        {
+            "id": "0",
+            "prev_image_path" : "assets/imgs/projectsPreview/ExpenseTrackerPrev.png",
+            "title" : "Expense Tracker app",
+            "description" : "Expense Tracker is one of my favorite application types. Thanks to my app I saved a lot of money. I always wanted to create my version of expence tracker so I did. This project has been desigen in REST architecture. On the backend side I used Python with framework Restful Flask. When I was planning app, I've decided to program frontend in vanilla JavaScript.",
+            "livelink" : "github.com",
+            "codelink" : "github.com"
+        }
+    ]
+}

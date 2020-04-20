@@ -3,7 +3,7 @@
         flex-direction: column;
     }
     .helloSection__image {
-        width: 50vw;
+        width: 90vw;
     }
     .helloSection__bottom {
         padding: 50px 0px;
@@ -13,13 +13,13 @@
     }
     .projectsSection__projectInfo {
         margin: 40px auto 0px;
-        width: 80%;
+        width: 100%;
     }
     .projectsSection__projectDescription {
-        max-width: 80%;
+        max-width: 100%;
     }
     .projectsSection__image {
-        width: 80%;
+        width: 100%;
         margin: 0px auto;
     }
 }

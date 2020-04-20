@@ -41,6 +41,15 @@
     background-color: #efefef;
 }
 
+.helloSection__image {
+    height: 725px;
+    width: 50vw;
+    background-image: url('../imgs/character.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .helloSection__top {
     display: flex;
     align-items: center;
@@ -185,18 +194,30 @@
     align-items: center;
     justify-content: space-between;
 }
-
+.projectsSection__pagination {
+    display: flex;
+    align-items: flex-end;
+    width: 100px;
+    margin: 40px 20px 0px;
+    float: right;
+}
 .projectsSection__pagginationBtn {
     width: 50px;
     height: 50px;
     color: #fff;
     background-color: var(--main-blue-color);
-    border: 0px;
-    border-radius: 7px;
     font-size: 1.2em;
-    margin: 20px;
+    margin: 0px;
+    padding: 0px;
+    border: 2px solid var(--main-blue-color);
+    cursor: pointer;
 }
-
+.projectsSection__pagginationBtn--2 {
+    border-radius: 0px 5px 5px 0px;
+}
+.projectsSection__pagginationBtn--1 {
+    border-radius: 5px 0px 0px 5px;
+}
 .projectsSection__pagginationBtn:hover {
     color: var(--main-blue-color);
     box-sizing: border-box;

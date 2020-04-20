@@ -32,7 +32,8 @@
                 <span class="bluecol">H</span>e<span class="bluecol">l</span><span class="bluecol">l</span>o 
                 <br>world!
             </h2>
-            <img src="assets/imgs/character.gif" alt="developer--image" class="helloSection__image">
+            <!--<img src="assets/imgs/character.gif" alt="developer--image" class="helloSection__image">-->
+            <div class="helloSection__image"></div>
             <h2 class="helloSection__text">
                 <span class="bluecol">I</span>'<span class="limecol">m</span><br><span class="bluecol">Cezary Kania</span> 
                 Junior <span class="bluecol">Software</span> developer
@@ -109,19 +110,21 @@ etc.
             Some of my projects:
         </h3>
         <div class="projectsSection__wrapper">
-            <button class="projectsSection__pagginationBtn"><</button>
             <div class="projectsSection__project">
-                <img class="projectsSection__image" src="assets/imgs/projectsPreview/ExpenseTrackerPrev.png" alt="project preview">
+                <img class="projectsSection__image" id="projectImage" src="#" alt="project preview">
                 <div class="projectsSection__projectInfo">
-                    <h4 class="projectsSection__projecttitle">Expense Tracker app</h4>
-                    <p class="projectsSection__projectDescription">Expense Tracker is one of my favorite application types. Thanks to my app I saved a lot of money. I always wanted to create my version of expence tracker so I did. This project has been desigen in REST architecture. On the backend side I used Python with framework Restful Flask. When I was planning app, I've decided to program frontend in vanilla JavaScript.</p>
-                    <a href="#" class="projectsSection__liveLink">Live</a>
-                    <a href="https://github.com/cezary-kania/ExpenseTracker" class="projectsSection__codeLink" target="_blank">View Code</a>
+                    <h4 class="projectsSection__projecttitle" id="projectTitle"></h4>
+                    <p class="projectsSection__projectDescription" id="projectDecription"></p>
+                    <a href="#" class="projectsSection__liveLink" id="projectLiveLink">Live</a>
+                    <a href="#" class="projectsSection__codeLink" id="projectCodeLink" target="_blank">View Code</a>
+                    <div class="projectsSection__pagination">
+                        <button class="projectsSection__pagginationBtn projectsSection__pagginationBtn--1" id="projectBtnPrev"><</button>
+                        <button class="projectsSection__pagginationBtn projectsSection__pagginationBtn--2" id="projectBtnNext">></button>
+                    </div>
                 </div>
             </div>
-            <button class="projectsSection__pagginationBtn">></button>
         </div>
-    
+        
     </section>
     <section class="contactSection" id="contactSection">
         <h3 class="contactSection__header">
@@ -136,7 +139,7 @@ etc.
                 <a class="contactSection__link" href="https://www.linkedin.com/in/cezary-kania-b8314314b/" target="_blank"><i class="icon-linkedin-circled"></i></a>
                 <a class="contactSection__link" href="https://www.facebook.com/cezary.kania.8" target="_blank"><i class="icon-facebook-squared"></i></a>
             </div>
-            <form action="#" class="contactSection__form">
+            <form class="contactSection__form" id="ContactForm">
                 <label for="e-mail" class="contactSection__label textInput--label">E-mail:</label>
                 <input type="email" name="e-mail" id="emailInput" class="contactSection__input" placeholder="your@email.com">
                 <label for="title" class="contactSection__label textInput--label">Message title:</label>
@@ -149,8 +152,9 @@ etc.
     </section>
     <footer class="footer">
         <p class="footer__text">
-            All rights reserved. Created with love by Cezary Kania 2020.
+            &copy All rights reserved. Created by Cezary Kania 2020.
         </p>
     </footer>
+    <script src="app.js"></script>
 </body>
 </html>
