@@ -197,8 +197,8 @@
 .projectsSection__pagination {
     display: flex;
     align-items: flex-end;
-    width: 100px;
-    margin: 40px 20px 0px;
+    min-width: 100px;
+    margin: 0px 15vw;
     float: right;
 }
 .projectsSection__pagginationBtn {
@@ -209,7 +209,7 @@
     font-size: 1.2em;
     margin: 0px;
     padding: 0px;
-    border: 2px solid var(--main-blue-color);
+    border: 2px solid #fff;
     cursor: pointer;
 }
 .projectsSection__pagginationBtn--2 {
@@ -378,6 +378,7 @@
     position: relative;
     margin-top: 10px;
     margin-left: 250px;
+    cursor: pointer;
 }
 .contactSection__send--btn:hover {
     background-color: var(--main-gray-color);

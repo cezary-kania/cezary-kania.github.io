@@ -1,25 +1,39 @@
 var projectsJSON = [
     {
         "prev_image_path" : "assets/imgs/projectsPreview/ExpenseTrackerPrev.png",
-        "title" : "Expense Tracker app",
-        "description" : "Expense Tracker is one of my favorite application types. Thanks to my app I saved a lot of money. I always wanted to create my version of expence tracker so I did. This project has been desigen in REST architecture. On the backend side I used Python with framework Restful Flask. When I was planning app, I've decided to program frontend in vanilla JavaScript.",
-        "livelink" : "#",
-        "codelink" : "https://github.com/cezary-kania/ExpenseTracker"
-    },
-    {
-        "prev_image_path" : "assets/imgs/projectsPreview/ExpenseTrackerPrev.png",
-        "title" : "Expense Tracker app 2",
-        "description" : "Expense Tracker is one of my favorite application types. Thanks to my app I saved a lot of money. I always wanted to create my version of expence tracker so I did. This project has been desigen in REST architecture. On the backend side I used Python with framework Restful Flask. When I was planning app, I've decided to program frontend in vanilla JavaScript.",
+        "title" : "Expense Tracker",
+        "description" : "Expense Tracker is one of my favorite application types. Thanks to my app I saved a lot of money.\
+         I always wanted to create my version of expence tracker so I did. This project has been desigen in REST architecture.\
+         On the backend side I used Python with framework Restful Flask. When I was planning app, I've decided to program frontend in vanilla JavaScript.",
         "livelink" : "",
         "codelink" : "https://github.com/cezary-kania/ExpenseTracker"
     },
     {
-        "id": "0",
-        "prev_image_path" : "assets/imgs/projectsPreview/ExpenseTrackerPrev.png",
-        "title" : "Expense Tracker app 3",
-        "description" : "Expense Tracker is one of my favorite application types. Thanks to my app I saved a lot of money. I always wanted to create my version of expence tracker so I did. This project has been desigen in REST architecture. On the backend side I used Python with framework Restful Flask. When I was planning app, I've decided to program frontend in vanilla JavaScript.",
+        "prev_image_path" : "assets/imgs/projectsPreview/WitDrivePrev.png",
+        "title" : "WitDrive",
+        "description" : "The cloud storage application created with college teammates.App allows users to upload and share files with others.\
+         My job was to design all frontend layouts, code it. I also programmed most of frontend functionalities like registration, \
+         web token authentication, file uploading, sharring etc.",
+        "livelink" : "https://wit-team.github.io/WitDrive-Frontend/",
+        "codelink" : "https://github.com/WIT-team/WitDrive-Frontend"
+    },
+    {
+        "prev_image_path" : "assets/imgs/projectsPreview/ImageProcessingApp.png",
+        "title" : "Image proccesing app",
+        "description" : "Image proccesing app is my college project. As a desktop app, it allows users to display and modify image histogram (to strech or equalize), \
+        apply some of point, neighborhood and morphological operations. The special feature I still work on is object segmentation and instance counting. \
+        Technologies I use: C#, WPF, EmguCV (OpenCV wrapper).",
         "livelink" : "",
-        "codelink" : ""
+        "codelink" : "https://github.com/cezary-kania/ImageProcessingApp"
+    },
+    {
+        "prev_image_path" : "assets/imgs/projectsPreview/fileupload_backend.png",
+        "title" : "File upload website",
+        "description" : "Backend to application with simples flask templates. I treat it more as a prototype for future project I want to create.\
+        Application allows users to share files to server. Server gets package of files and generate unique link. Second user who has this link, can download that package. \
+        Link with files are deleted from server after time specified by user.",
+        "livelink" : "",
+        "codelink" : "https://github.com/cezary-kania/fileupload-website"
     }
 ]
 class Project {
@@ -89,7 +103,7 @@ class VisitCounter {
         if (localStorage.getItem("lastvisitDate") !== null) {
             let prev_visit = parseInt(localStorage.getItem("lastvisitDate"));
             let time =  Date.now();
-            let twoHours = 3600000;
+            let twoHours = 2*3600000;
             if(time - twoHours > prev_visit) {
                 localStorage.setItem("lastvisitDate", time);
                 this.SendNewVisitNotification();
