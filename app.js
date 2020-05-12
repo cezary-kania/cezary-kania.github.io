@@ -1,3 +1,4 @@
+const serverApi = "https://radiant-mesa-31676.herokuapp.com";
 var projectsJSON = [
     {
         "prev_image_path" : "assets/imgs/projectsPreview/ExpenseTrackerPrev.png",
@@ -116,7 +117,7 @@ class VisitCounter {
     }
     SendNewVisitNotification() {
         const XHR = new XMLHttpRequest();
-        XHR.open("POST","http://127.0.0.1:1234/new_visit");
+        XHR.open("POST",`${serverApi}/new_visit`);
         XHR.send();
     }
 }
@@ -137,7 +138,7 @@ class MessageSender {
         XHR.addEventListener('load',()=> {
             alert( 'Thanks for you message!' );
         });
-        XHR.open("POST","http://127.0.0.1:1234/new_message");
+        XHR.open("POST",`${serverApi}/new_message`);
         XHR.send(formData);
     }
 
