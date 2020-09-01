@@ -1,4 +1,4 @@
-const serverApi = "https://radiant-mesa-31676.herokuapp.com";
+const serverApi = "https://portfolio-backend2020.herokuapp.com";
 var projectsJSON = [
     {
         "prev_image_path" : "assets/imgs/projectsPreview/ExpenseTrackerPrev.png",
@@ -116,9 +116,12 @@ class VisitCounter {
         }    
     }
     SendNewVisitNotification() {
-        const XHR = new XMLHttpRequest();
-        XHR.open("POST",`${serverApi}/new_visit`);
-        XHR.send();
+        fetch(`${serverApi}/visits`, {
+            method : "POST"
+        })
+        .catch(err => {
+            console.log(err);
+        })
     }
 }
 class MessageSender {
@@ -130,18 +133,25 @@ class MessageSender {
         });
     }
     SendMessage(form) {
-        const XHR = new XMLHttpRequest();
-        const formData = new FormData(form);
-        XHR.addEventListener('error',()=> {
+        const msg = {
+            "e-mail" : form.elements["e-mail"].value,
+            "title" : form.elements["title"].value,
+            "message" : form.elements["message"].value
+        }
+        fetch(`${serverApi}/message`, {
+            method : "POST",
+            body :  JSON.stringify(msg)
+        })
+        .then(result=> result.json())
+        .then(result=> {
+            console.log(result);
+            alert('Thanks for you message!');
+        })
+        .catch(error => {
             alert( 'Oops! Something went wrong.' );
-        });
-        XHR.addEventListener('load',()=> {
-            alert( 'Thanks for you message!' );
-        });
-        XHR.open("POST",`${serverApi}/new_message`);
-        XHR.send(formData);
+            console.log(error);
+        })
     }
-
 }
 const carousel = new ProjectsCarousel(projectsJSON);
 const vCounter = new VisitCounter();
