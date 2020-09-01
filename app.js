@@ -140,6 +140,7 @@ class MessageSender {
         }
         fetch(`${serverApi}/message`, {
             method : "POST",
+            headers : new Headers({'content-type':'application/json'}),
             body :  JSON.stringify(msg)
         })
         .then(result=> result.json())
