@@ -10,16 +10,20 @@
     }
     .projectsSection__project {
         flex-direction: column;
+        width: 100vw;
+    }
+    .projectsSection__header {
+        margin-bottom: 30px;
     }
     .projectsSection__projectInfo {
         margin: 40px auto 0px;
-        width: 100%;
+        width: 75%;
     }
     .projectsSection__projectDescription {
         max-width: 100%;
     }
     .projectsSection__image {
-        width: 100%;
+        width: 80%;
         margin: 0px auto;
     }
 }
@@ -59,6 +63,10 @@
 }
 
 @media (max-width:700px) {
+    .projectsSection__image,
+    .projectsSection__projectInfo {
+        width: 90%;
+    }
     .helloSection__text {
         font-size: 2.5em;
     }
