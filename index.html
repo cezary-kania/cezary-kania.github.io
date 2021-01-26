@@ -11,7 +11,15 @@
 </head>
 <body>
     <nav class="pageNavigation">
-        <ul class="pageNavigation__list">
+        <div class="pageNavigation__hamburger">
+            <input class="pangeNavigation__hamburger-switch"
+                   type="checkbox" 
+                   id="hamburgerSwitch"/>
+            <span class="pageNavigation__hamburger-line"></span>
+            <span class="pageNavigation__hamburger-line"></span>
+            <span class="pageNavigation__hamburger-line"></span>
+        </div>
+        <ul class="pageNavigation__list" id="pageNavigationList">
             <li class="pageNavigation__item">
                 <a href="assets/CezaryKaniaCV.pdf" class="pageNavigation__link" download>Resume</a>
             </li>

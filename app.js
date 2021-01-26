@@ -37,6 +37,8 @@ var projectsJSON = [
         "codelink" : "https://github.com/cezary-kania/fileupload-website"
     }
 ]
+
+
 class Project {
     constructor(prev_image_path, title, description, livelink = null, codelink = null) {
         this.prev_image_path = prev_image_path;
@@ -157,3 +159,12 @@ class MessageSender {
 const carousel = new ProjectsCarousel(projectsJSON);
 const vCounter = new VisitCounter();
 const msgSender = new MessageSender();
+
+// Hamburger toggle
+const toggleCb = document.querySelector("#hamburgerSwitch");
+const navList = document.querySelector("#pageNavigationList");
+toggleCb.addEventListener('click', (e) => {
+    const isChecked = e.target.checked;
+    if(isChecked) navList.classList.add('transformNone');
+    else navList.classList.remove('transformNone');
+});

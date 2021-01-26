@@ -19,6 +19,9 @@
 html {
     scroll-behavior: smooth;
 }
+.pageNavigation__hamburger {
+    display: none;
+}
 .pageNavigation__list {
     list-style-type: none;
     max-width: 300px;
@@ -37,6 +40,10 @@ html {
     color : var(--main-red-color);
     text-decoration: none;
     font-family: var(--main-font-bolded);
+}
+.pageNavigation__link:hover {
+    color : var(--main-darker-red-color);
+    transition: 0.3s;
 }
 
 .helloSection {

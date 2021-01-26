@@ -25,19 +25,37 @@
 }
 
 @media (max-width:1000px) {
-    .pageNavigation__list {
+    /* .pageNavigation__list {
         flex-direction: column;
         width: calc(100vw - 25px);
         text-align: center;
         padding: 0px;
+    } */
+    .pageNavigation__hamburger {
+        display: block;
+    }
+    .pageNavigation__list {
+        position: absolute;
+        background-color:  #fafbfe;
+        right: 0px;
+        width: 100%;
+        max-width:unset;
+        padding: 50px 0 50px;
+        align-items: center;
+        flex-direction: column;
+
+        transform-origin: 0% 0%;
+        transform: translate(100%, 0%);   
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
     }
     .pageNavigation__item {
-        margin-top: 20px;
+        margin: 20px auto;
+        display: block;
+        font-size: 1.5em;
     }
     .pageNavigation__item:last-child {
         margin-bottom: 20px;
     }
-   
 }
 
 @media (max-width:700px) {
@@ -69,4 +87,66 @@
     .contactSection__message--area {
         width: calc(100% - 20px);
     }
+}
+
+.pageNavigation__hamburger {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    z-index: 1;
+    user-select: none;
+}
+.pangeNavigation__hamburger-switch {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    right: -5px;
+    z-index: 2;
+    opacity: 0;
+}
+.pageNavigation__hamburger-line {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background-color: #232323;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+.pageNavigation__hamburger-line:first-child {
+    transform-origin: 0% 0%;
+}
+
+.pageNavigation__hamburger-line:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+
+.pangeNavigation__hamburger-switch:checked ~
+    .pageNavigation__hamburger-line {
+    opacity: 1;
+    transform: rotate(45deg) translate(0px, 0px);
+    background: #232323;
+}
+
+.pangeNavigation__hamburger-switch:checked ~
+    .pageNavigation__hamburger-line:nth-last-child(2) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+.pangeNavigation__hamburger-switch:checked ~
+    .pageNavigation__hamburger-line:nth-last-child(1) {
+    transform: rotate(-45deg) translate(-2px, -1px);
+}
+
+.transformNone {
+    transform: none;
 }
