@@ -96,7 +96,7 @@ html {
     color: var(--main-red-color);
     font-family: var(--main-font-bolded);
     font-size: 0.8em;
-    background-color: #efefef;
+    background-color: #f0f0f0;
     text-decoration: none;
     border: 2px solid var(--main-red-color);
     padding: 10px 20px;
@@ -126,61 +126,55 @@ html {
     font-family: var(--main-font-bolded);
 }
 
-.interestsSection {
-    background-color: var(--main-white-color);
-    padding: 50px 0px;
+.skillsSection {
+    font-family: var(--main-font);
 }
 
-.interestsSection__header {
-    font-family: var(--main-font);
+.skillsSection__header {
+    margin-top: 50px;
     text-align: center;
     color: var(--main-darker-red-color);
     font-size: 2em;
 }
 
-.interestsSection__boxes--wrapper {
+.skillsSection__main {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+.skillsSection__image {
+    width: calc(50% - 40px);
+}
+.skillsSection__skills {
+    padding: 20px;
+}
+.skillsSection__skills__header {
+    margin: 5px;
+    color: #fb315a;
+    font-size: 1.4em;
+}
+.skillsSection__skills__desc {
+    margin: 15px 5px 0;
+    font-size: 1.2em;
+    text-align: justify;
+    line-height: 1.5em;
+}
+.skillsSection__skills__list {
+    list-style-type: none;
+    padding: 10px 0;
+    margin: 10px 0 15px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    max-width: 1200px;
-    margin: 0px auto;
 }
-
-.interestsSection__box {
-    width: 300px;
-    background-color: #fff;
-    border-radius: 10px;
-    text-align: center;
-    padding: 50px 10px;
-    margin: 20px auto;
-    box-shadow: 0 3px 3px rgba(0,0,0,0.2);
-}
-
-.interestsSection__icon {
-    font-size: 6em;
-    color: var(--main-darker-red-color);
-}
-
-.interestsSection__box--title {
-    color: var(--main-darker-red-color);
-    font-family: var(--main-font);
-    font-size: 1em;
-    margin: 10px auto;
-}
-
-.interestsSection__box--desc {
-    font-family: var(--main-font);
-    font-size: 0.7em;
-    width: 175px;
-    margin: 10px auto 20px;
-}
-
-.interestsSection__explanation {
-    font-family: var(--main-font);
-    font-size: 0.7em;
-    text-align: center;
-    color: #7c7b7b;
-    margin: 15px;
+.skillsSection__list-item {
+    display: inline-block;
+    margin: 5px 5px;
+    color: #efefef;
+    background-color: #fb315a;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
 }
 
 .darker--red--color {
