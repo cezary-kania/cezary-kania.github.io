@@ -155,6 +155,6 @@ const toggleCb = document.querySelector("#hamburgerSwitch");
 const navList = document.querySelector("#pageNavigationList");
 toggleCb.addEventListener('click', (e) => {
     const isChecked = e.target.checked;
-    if(isChecked) navList.classList.add('transformNone');
-    else navList.classList.remove('transformNone');
+    if(isChecked) navList.classList.add('pageNavigation__list--open');
+    else navList.classList.remove('pageNavigation__list--open');
 });

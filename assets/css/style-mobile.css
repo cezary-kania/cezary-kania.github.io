@@ -29,18 +29,16 @@
         display: block;
     }
     .pageNavigation__list {
+        overflow-x: hidden;
         position: absolute;
         background-color:  #fafbfe;
         right: 0px;
-        width: 100%;
+        width: 0;
         max-width:unset;
         padding: 50px 0 50px;
         align-items: center;
-        flex-direction: column;
-
-        transform-origin: 0% 0%;
-        transform: translate(100%, 0%);   
-        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+        flex-direction: column; 
+        transition: width 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
     }
     .pageNavigation__item {
         margin: 20px auto;
@@ -138,9 +136,9 @@
 
 .pangeNavigation__hamburger-switch:checked ~
     .pageNavigation__hamburger-line:nth-last-child(1) {
-    transform: rotate(-45deg) translate(-2px, -1px);
+    transform: rotate(-45deg) translate(-1px, -1px);
 }
 
-.transformNone {
-    transform: none;
+.pageNavigation__list--open {
+    width: 100%;
 }
