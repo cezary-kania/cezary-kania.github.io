@@ -51,13 +51,22 @@
     .helloSection__text {
         font-size: 2.5em;
     }
-}
-
-@media (max-width:800px) {
     .contactSection__form {
         margin: 40px auto;
+        width: 85%;
     }
-    
+    .contactSection__links {
+        margin: 0 auto;
+        width: 85%;
+    }
+    .contactSection__wrapper {
+        width: 100%;
+        flex-direction: column;
+    }
+    .contactSection__input {
+        width: calc(100% - 40px);
+    }
+    .contactSection__message--area {
+        width: calc(100% - 20px);
+    }
 }
-
-

@@ -10,12 +10,14 @@
     --main-white-color: #fafbfe;
     --main-font: 'Myriad Pro Regular';
     --main-font-bolded: 'Myriad Pro Bold';
-    
 }
 
 * {
     margin : 0px;
     padding : 0px;
+}
+html {
+    scroll-behavior: smooth;
 }
 .pageNavigation__list {
     list-style-type: none;
@@ -290,14 +292,14 @@
     font-family: var(--main-font-bolded);
     text-align: center;
     font-size: 2em;
-    margin-bottom: 30px;
+    margin: 0px auto 30px;
+    width: 90vw;
 }
 
 .contactSection__wrapper {
     margin: 0px auto;
     width: 70vw;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
 }
 
@@ -318,46 +320,43 @@
     color: #fff;
     transition: 0.2s;
 }
-
 .contactSection__label  {
     font-family: var(--main-font);
     color: #fff;
-    font-size: 0.8em;
+    font-size: 0.9em;
     display: block;
     margin:10px 0px;
     position: relative;
 }
 .contactSection__input {
-    padding: 5px 20px;
-    font-size: 0.8em;
+    padding: 10px 20px;
+    font-size: 0.9em;
     font-family: var(--main-font);
     width: 300px;
     border-radius: 5px;
     border: 0px;
 }
-
 .contactSection__label:after {
     content: "";
-    font-size: 100px;
     position: absolute;
     width: 7px;
     border-radius: 5px 0px 0px 5px;
-    height: 26px;
-    top:25px;
+    height: 38px;
+    top: 28px;
     left: 0px;
     background-color: var(--main-red-color);
 }
 .contactSection__label--textArea {
     font-family: var(--main-font);
     color: #fff;
-    font-size: 0.8em;
+    font-size: 0.9em;
     display: block;
-    margin:10px 0px;
+    margin: 10px 0px;
 }
 
 .contactSection__message--area {
     padding: 10px 10px;
-    font-size: 0.8em;
+    font-size: 0.9em;
     font-family: var(--main-font);
     width: 320px;
     height: 10em;
@@ -365,7 +364,10 @@
     border: 0px;
     resize:none;
 }
-
+.contactSection__button-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
 .contactSection__send--btn {
     display: block;
     border:0px;
@@ -377,7 +379,6 @@
     font-size: 0.8em;
     position: relative;
     margin-top: 10px;
-    margin-left: 250px;
     cursor: pointer;
 }
 .contactSection__send--btn:hover {
