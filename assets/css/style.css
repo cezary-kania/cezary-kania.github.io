@@ -138,9 +138,10 @@ html {
 }
 
 .skillsSection__main {
-    margin-top: 50px;
     display: flex;
     justify-content: space-around;
+    max-width: 1500px;
+    margin: 50px auto 0;
 }
 .skillsSection__image {
     width: calc(50% - 40px);
