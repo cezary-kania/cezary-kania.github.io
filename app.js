@@ -120,40 +120,30 @@ class VisitCounter {
     SendNewVisitNotification() {
         fetch(`${serverApi}/visits`, {
             method : "POST"
-        })
-        .catch(err => {
-            console.log(err);
-        })
+        }).catch(err => {console.log(err);});
     }
 }
 class MessageSender {
     constructor() {
         const form = document.querySelector("#ContactForm");
-        form.addEventListener('submit', (e) => {
+        form.addEventListener('submit', async (e) => {
             e.preventDefault();
-            this.SendMessage(form);
+            await this.SendMessage(form);
         });
     }
-    SendMessage(form) {
+    async SendMessage(form) {
         const msg = {
             "e-mail" : form.elements["e-mail"].value,
             "title" : form.elements["title"].value,
             "message" : form.elements["message"].value
         }
-        fetch(`${serverApi}/message`, {
+        const response = await fetch(`${serverApi}/message`, {
             method : "POST",
             headers : new Headers({'content-type':'application/json'}),
             body :  JSON.stringify(msg)
         })
-        .then(result=> result.json())
-        .then(result=> {
-            console.log(result);
-            alert('Thanks for you message!');
-        })
-        .catch(error => {
-            alert( 'Oops! Something went wrong.' );
-            console.log(error);
-        })
+        .catch(_=> alert('Oops! Something went wrong.'));
+        if(response.ok) alert('Thanks for you message!');
     }
 }
 const carousel = new ProjectsCarousel(projectsJSON);
