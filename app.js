@@ -120,7 +120,8 @@ class VisitCounter {
     SendNewVisitNotification() {
         fetch(`${serverApi}/visits`, {
             method : "POST"
-        }).catch(err => {console.log(err);});
+        })
+        .catch(err => {console.log(err);});
     }
 }
 class MessageSender {
@@ -143,7 +144,7 @@ class MessageSender {
             body :  JSON.stringify(msg)
         })
         .catch(_=> alert('Oops! Something went wrong.'));
-        if(response.ok) alert('Thanks for you message!');
+        if((response != null) && response.ok) alert('Thanks for you message!');
     }
 }
 const carousel = new ProjectsCarousel(projectsJSON);

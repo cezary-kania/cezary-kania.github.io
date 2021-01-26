@@ -95,7 +95,7 @@ html {
 .helloSection__button {
     color: var(--main-red-color);
     font-family: var(--main-font-bolded);
-    font-size: 0.6em;
+    font-size: 0.8em;
     background-color: #efefef;
     text-decoration: none;
     border: 2px solid var(--main-red-color);
